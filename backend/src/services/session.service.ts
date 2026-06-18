@@ -35,3 +35,15 @@ export const getSessions = async () => {
     }
   ]);
 };
+
+export const getSessionEvents = async (
+  sessionId: string
+) => {
+  return Event.find({
+    sessionId
+  })
+    .sort({
+      timestamp: 1
+    })
+    .lean();
+};
