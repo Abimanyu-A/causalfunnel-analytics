@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import eventRoutes from "./routes/event.routes";
+import sessionRoutes from "./routes/session.routes";
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.get("/health", (_, res) => {
 });
 
 app.use("/api/events", eventRoutes);
+app.use("/api/sessions", sessionRoutes);
 
 export default app;
