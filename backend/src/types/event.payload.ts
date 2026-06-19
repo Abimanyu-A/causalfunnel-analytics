@@ -9,4 +9,9 @@ export interface EventPayload {
     x: number;
     y: number;
   };
+
+  viewport?: {
+    width: number;
+    height: number;
+  };
 }

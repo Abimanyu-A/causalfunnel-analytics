@@ -55,8 +55,13 @@ document.addEventListener(
             timestamp: new Date().toISOString(),
 
             coordinates: {
-                x: event.clientX,
-                y: event.clientY
+                x: event.clientX / window.innerWidth,
+                y: event.clientY / window.innerHeight
+            },
+
+            viewport: {
+                width: window.innerWidth,
+                height: window.innerHeight
             }
         });
 

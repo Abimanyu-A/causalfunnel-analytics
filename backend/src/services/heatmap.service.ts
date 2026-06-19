@@ -20,3 +20,7 @@ export const getHeatmapData = async (
     y: event.coordinates?.y
   }));
 };
+
+export const getTrackedPages = async () => {
+  return Event.distinct("pageUrl");
+};
