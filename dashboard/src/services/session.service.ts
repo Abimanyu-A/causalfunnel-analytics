@@ -5,3 +5,13 @@ export const getSessions = async () => {
 
   return response.data.data;
 };
+
+export const getSessionEvents = async (
+  sessionId: string
+) => {
+  const response = await api.get(
+    `/sessions/${sessionId}`
+  );
+
+  return response.data.data;
+};
