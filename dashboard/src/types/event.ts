@@ -1,5 +1,9 @@
+export type EventType =
+  | "page_view"
+  | "click";
+
 export interface Event {
-  eventType: string;
+  eventType: EventType;
   pageUrl: string;
   timestamp: string;
 

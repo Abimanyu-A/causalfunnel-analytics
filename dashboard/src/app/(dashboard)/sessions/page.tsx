@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SessionTable from "@/components/sessions/session-table";
+import SessionTimeline from "@/components/sessions/session-timeline";
 
 export default function SessionsPage() {
 
@@ -32,19 +33,9 @@ export default function SessionsPage() {
       />
 
       {selectedSession && (
-
-        <div className="border rounded-xl p-6">
-
-          <h2 className="font-medium">
-            Selected Session
-          </h2>
-
-          <p className="text-muted-foreground mt-2">
-            {selectedSession}
-          </p>
-
-        </div>
-
+        <SessionTimeline
+          sessionId={selectedSession}
+        />
       )}
 
     </div>
