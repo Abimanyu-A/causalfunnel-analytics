@@ -187,7 +187,7 @@ export default function HeatmapOverlayView({ data }: Props) {
 
         {snapshot && points.length === 0 && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-sm text-zinc-400">Wireframe captured — no clicks recorded yet.</p>
+            <p className="text-sm text-zinc-400">Wireframe captured - no clicks recorded yet.</p>
           </div>
         )}
       </div>
@@ -195,7 +195,7 @@ export default function HeatmapOverlayView({ data }: Props) {
       {snapshot && (
         <div className="flex items-center gap-6 mt-3">
           <p className="text-xs text-zinc-400">
-            Captured at {snapshot.viewportWidth}px wide — {snapshot.elements.length} elements mapped
+            Captured at {snapshot.viewportWidth}px wide - {snapshot.elements.length} elements mapped
           </p>
           <p className="text-xs text-zinc-400">
             {points.length} click{points.length !== 1 ? "s" : ""} recorded

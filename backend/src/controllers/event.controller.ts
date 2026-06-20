@@ -13,6 +13,12 @@ export const trackEvent = async (
       data: event
     });
   } catch (error) {
+
+    if (error instanceof Error && (error as Error & { status?: number }).status === 400) {
+      res.status(400).json({ success: false, message: error.message });
+      return;
+    }
+    
     console.error(error);
 
     res.status(500).json({

@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-zinc-50 font-sans">
       <header className="border-b border-zinc-100">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-sm font-semibold tracking-tight text-zinc-900">
+          <span className="text-2xl font-semibold pt-2 tracking-tight text-zinc-900">
             CausalFunnel
           </span>
           <Link
             href="/sessions"
-            className="text-sm font-medium text-zinc-900 bg-zinc-900 text-white px-4 py-2 rounded-md hover:bg-zinc-700 transition-colors"
+            className="text-sm font-medium bg-zinc-900 text-white px-4 py-2 rounded-md hover:bg-zinc-700 transition-colors"
           >
             Open Dashboard
           </Link>
@@ -23,7 +23,7 @@ export default function Home() {
             User Behavior Analytics
           </p>
           <h1 className="text-5xl font-semibold tracking-tight text-zinc-900 leading-[1.1] mb-6">
-            Understand every session. Fix what breaks.
+            Understand every session.
           </h1>
           <p className="text-lg text-zinc-500 leading-relaxed mb-10 max-w-xl">
             CausalFunnel captures page views, clicks, and user journeys across your product.
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-zinc-100 bg-zinc-50">
+      <section className="border-t border-zinc-100 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-3 gap-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-3">
@@ -56,7 +56,7 @@ export default function Home() {
               Every user journey, recorded
             </h3>
             <p className="text-sm text-zinc-500 leading-relaxed">
-              Each visit is tied to a persistent session. Browse the full ordered event log — page views, clicks, device info, and duration — in one place.
+              Each visit is tied to a persistent session. Browse the full ordered event log - page views, clicks, device info, and duration - in one place.
             </p>
           </div>
           <div>
@@ -84,10 +84,10 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-zinc-100">
+      <footer className="border-t border-zinc-100 bg-zinc-50">
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center">
           <p className="text-xs text-zinc-400">
-            CausalFunnel Analytics — Full Stack Assignment
+            CausalFunnel Analytics - Full Stack Assignment
           </p>
         </div>
       </footer>
