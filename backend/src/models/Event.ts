@@ -35,7 +35,13 @@ const eventSchema = new Schema(
     },
 
     device: {
-        userAgent
+      type: {
+        type: String
+      },
+
+      userAgent: {
+        type: String
+      }
     }
   },
   {

@@ -11,4 +11,14 @@ export interface Event {
     x: number;
     y: number;
   };
+
+  viewport?: {
+    width: number;
+    height: number;
+  };
+
+  device?: {
+    type: string;
+    userAgent: string;
+  };
 }

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SessionTable from "@/components/sessions/session-table";
 import SessionTimeline from "@/components/sessions/session-timeline";
+import SessionSummary from "@/components/sessions/session-summary";
 
 export default function SessionsPage() {
 
@@ -30,6 +31,10 @@ export default function SessionsPage() {
       <SessionTable
         selectedSession={selectedSession}
         onSelect={setSelectedSession}
+      />
+
+      <SessionSummary
+        sessionId={selectedSession}
       />
 
       {selectedSession && (

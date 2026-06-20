@@ -41,6 +41,21 @@ function trackPageView() {
     });
 }
 
+function getDeviceType() {
+
+    const width = window.innerWidth;
+
+    if (width < 768) {
+        return "mobile";
+    }
+
+    if (width < 1024) {
+        return "tablet";
+    }
+
+    return "desktop";
+}
+
 document.addEventListener(
     "click",
     (event) => {
@@ -62,6 +77,11 @@ document.addEventListener(
             viewport: {
                 width: window.innerWidth,
                 height: window.innerHeight
+            },
+
+            device: {
+                type: getDeviceType(),
+                userAgent: navigator.userAgent
             }
         });
 

@@ -17,4 +17,9 @@ export interface EventDocument {
   timestamp: Date;
   coordinates?: Coordinates;
   viewport?: viewport;
+  device?: {
+    type: string;
+
+    userAgent: string;
+  }
 }

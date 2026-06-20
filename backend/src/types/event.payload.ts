@@ -14,4 +14,10 @@ export interface EventPayload {
     width: number;
     height: number;
   };
+
+  device?: {
+    type: string;
+
+    userAgent: string;
+  }
 }
