@@ -3,6 +3,7 @@ import cors from "cors";
 import eventRoutes from "./routes/event.routes";
 import sessionRoutes from "./routes/session.routes";
 import heatmapRoutes from "./routes/heatmap.routes";
+import snapshotRoutes from "./routes/snapshot.routes";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/health", (_, res) => {
 app.use("/api/events", eventRoutes);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/heatmap", heatmapRoutes);
+app.use("/api/snapshots", snapshotRoutes);
 app.use("/tracker", express.static("public"));
 
 export default app;

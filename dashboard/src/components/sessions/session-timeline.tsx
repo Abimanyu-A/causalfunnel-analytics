@@ -2,11 +2,17 @@
 
 import { useSessionEvents } from "@/hooks/use-session-events";
 
+interface ClickElement {
+  tagName: string;
+  text?: string;
+  id?: string;
+}
+
 interface TimelineEvent {
   eventType: "page_view" | "click";
   pageUrl: string;
   timestamp: string;
-  coordinates?: { x: number; y: number };
+  element?: ClickElement;
 }
 
 export default function SessionTimeline({ sessionId }: { sessionId: string }) {
@@ -63,12 +69,20 @@ export default function SessionTimeline({ sessionId }: { sessionId: string }) {
                   {new Date(event.timestamp).toLocaleTimeString()}
                 </span>
               </div>
+
               <p className="text-sm text-zinc-700">{event.pageUrl}</p>
-              {event.coordinates && (
-                <p className="text-xs text-zinc-400 mt-0.5">
-                  {(event.coordinates.x * 100).toFixed(1)}% x{" "}
-                  {(event.coordinates.y * 100).toFixed(1)}%
-                </p>
+
+              {event.eventType === "click" && event.element && (
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-xs font-mono bg-zinc-100 text-zinc-500 px-1.5 py-0.5 rounded">
+                    {event.element.tagName.toLowerCase()}
+                  </span>
+                  {event.element.text && (
+                    <span className="text-xs text-zinc-400 truncate max-w-xs">
+                      &ldquo;{event.element.text}&rdquo;
+                    </span>
+                  )}
+                </div>
               )}
             </div>
           </div>

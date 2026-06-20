@@ -16,10 +16,16 @@ export interface EventDocument {
   pageUrl: string;
   timestamp: Date;
   coordinates?: Coordinates;
+  absoluteCoordinates?: Coordinates;
   viewport?: viewport;
   device?: {
     type: string;
-
     userAgent: string;
   }
+  element?: {
+    tagName: string;
+    text?: string;
+    id?: string;
+    className?: string;
+  };
 }

@@ -29,6 +29,11 @@ const eventSchema = new Schema(
       y: Number
     },
 
+    absoluteCoordinates: { 
+      x: Number, 
+      y: Number 
+    },
+
     viewport: {
       width: Number,
       height: Number
@@ -42,7 +47,15 @@ const eventSchema = new Schema(
       userAgent: {
         type: String
       }
-    }
+    },
+
+    element: {
+      tagName: String,
+      text: String,
+      id: String,
+      className: String,
+    },
+
   },
   {
     versionKey: false

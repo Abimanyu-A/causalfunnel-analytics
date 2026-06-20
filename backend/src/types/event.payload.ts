@@ -10,6 +10,11 @@ export interface EventPayload {
     y: number;
   };
 
+  absoluteCoordinates?: { 
+    x: number; 
+    y: number 
+  };
+
   viewport?: {
     width: number;
     height: number;
@@ -17,7 +22,13 @@ export interface EventPayload {
 
   device?: {
     type: string;
-
     userAgent: string;
   }
+
+  element?: {
+    tagName: string;
+    text?: string;
+    id?: string;
+    className?: string;
+  };
 }

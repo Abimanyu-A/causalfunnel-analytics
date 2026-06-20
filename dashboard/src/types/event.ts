@@ -12,6 +12,11 @@ export interface Event {
     y: number;
   };
 
+  absoluteCoordinates?: { 
+    x: number; 
+    y: number 
+  };
+
   viewport?: {
     width: number;
     height: number;
@@ -20,5 +25,12 @@ export interface Event {
   device?: {
     type: string;
     userAgent: string;
+  };
+
+  element?: {
+    tagName: string;
+    text?: string;
+    id?: string;
+    className?: string;
   };
 }
