@@ -19,5 +19,6 @@ app.get("/health", (_, res) => {
 app.use("/api/events", eventRoutes);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/heatmap", heatmapRoutes);
+app.use("/tracker", express.static("public"));
 
 export default app;
