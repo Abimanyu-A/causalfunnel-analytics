@@ -37,7 +37,7 @@ function trackPageView() {
 
         pageUrl: window.location.pathname,
 
-        timestamp: new Date()
+        timestamp: new Date().toISOString()
     });
 }
 
