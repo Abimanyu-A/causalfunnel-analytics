@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Meridian</title>
+
+<style>
+*, *::before, *::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#111;
+    background:#fff;
+}
+
+nav{
+    height:64px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    border-bottom:1px solid #e5e5e5;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#111;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.label{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#999;
+    margin-bottom:16px;
+}
+
+h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:28px;
+}
+
+.intro{
+    max-width:700px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:70px;
+}
+
+.hero-image{
+    overflow:hidden;
+    border-radius:18px;
+    margin-bottom:80px;
+}
+
+.hero-image img{
+    width:100%;
+    display:block;
+}
+
+.section{
+    margin-bottom:80px;
+}
+
+.section h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.section p{
+    max-width:720px;
+    color:#555;
+    line-height:1.9;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.value-card{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    padding:28px;
+}
+
+.value-card h3{
+    margin-bottom:14px;
+    font-size:18px;
+}
+
+.value-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
+}
+
+footer{
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    font-size:12px;
+    color:#999;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="search.html">Search</a>
+<a href="cart.html">Cart</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<p class="label">
+About Meridian
+</p>
+
+<h1>
+Designed for modern living.
+</h1>
+
+<p class="intro">
+Meridian creates thoughtfully designed home goods that bring simplicity, warmth and functionality to everyday spaces. We believe the objects people use most should be beautiful, durable and made to last.
+</p>
+
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1600"
+alt="">
+</div>
+
+<div class="section">
+
+<h2>
+Our Story
+</h2>
+
+<p>
+Founded in 2021, Meridian began with a simple idea: everyday products shouldn't have to choose between form and function. Inspired by timeless interiors and modern craftsmanship, we create pieces that fit naturally into contemporary homes while remaining useful for years to come.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>
+What We Value
+</h2>
+
+<div class="values-grid">
+
+<div class="value-card">
+<h3>
+Timeless Design
+</h3>
+
+<p>
+We create products with simple forms and lasting appeal rather than chasing short-lived trends.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<h3>
+Quality Materials
+</h3>
+
+<p>
+Carefully selected materials ensure every piece feels premium and stands up to daily use.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<h3>
+Thoughtful Living
+</h3>
+
+<p>
+We believe well-designed spaces help create calmer, more intentional routines.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>
+Built For Everyday Life
+</h2>
+
+<p>
+From workspace essentials to living room accents, every Meridian product is designed with practicality in mind. Our collections are curated to help people create spaces that feel comfortable, functional and timeless.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian</p>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
+</body>
+</html>

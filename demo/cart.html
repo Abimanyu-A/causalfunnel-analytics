@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — Meridian</title>
+
+<style>
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#fff;
+    color:#111;
+}
+
+nav{
+    height:64px;
+    border-bottom:1px solid #e5e5e5;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    background:white;
+    position:sticky;
+    top:0;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    font-weight:600;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:44px;
+    margin-bottom:50px;
+}
+
+.cart-layout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+}
+
+.cart-items{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.cart-item{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.cart-item img{
+    width:120px;
+    height:90px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.item-name{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.item-meta{
+    color:#666;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.item-price{
+    margin-left:auto;
+    font-weight:600;
+}
+
+.summary{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    padding:30px;
+    height:max-content;
+}
+
+.summary h2{
+    font-size:22px;
+    margin-bottom:28px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    color:#555;
+}
+
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:600;
+    margin-top:28px;
+    padding-top:28px;
+    border-top:1px solid #e5e5e5;
+}
+
+.btn{
+    width:100%;
+    margin-top:32px;
+    border:none;
+    background:#111;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.btn:hover{
+    background:#333;
+}
+
+.recommendations{
+    margin-top:100px;
+}
+
+.recommendations h2{
+    margin-bottom:36px;
+    font-size:28px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.product-card{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.product-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.product-body{
+    padding:18px;
+}
+
+.product-name{
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.product-price{
+    color:#666;
+    font-size:13px;
+}
+
+footer{
+    margin-top:100px;
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="search.html">Search</a>
+<a href="product.html">Products</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<p class="label">
+Shopping Cart
+</p>
+
+<h1>
+Your cart
+</h1>
+
+<div class="cart-layout">
+
+<div class="cart-items">
+
+<div class="cart-item">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+
+<div>
+
+<div class="item-name">
+Minimal Desk Lamp
+</div>
+
+<div class="item-meta">
+Quantity: 1<br>
+Workspace Collection
+</div>
+
+</div>
+
+<div class="item-price">
+₹ 89.00
+</div>
+
+</div>
+
+<div class="cart-item">
+
+<img src="https://imgs.search.brave.com/QUf74V0p6NhJhLGkt2G6y-IVWoFlSkYzXHGyx6ziiTU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zY2Ru/LnNwZWVkc2l6ZS5j/b20vYWE1ZDZjZDct/ZGE5MS00NTQ2LTky/ZDktODkzZWE0MmRk/N2ZmL3d3dy5ua3Vr/dS5jb20vY2RuL3No/b3AvZmlsZXMvQ2Fu/ZWxhLU11Zy1EdXN0/eS1UZXJyYWNvdHRh/LVNldC1vZi0yLW5r/dWt1LTIuanBnP3Y9/MTc3OTg5MjM3OSZ3/aWR0aD0zODQw">
+
+<div>
+
+<div class="item-name">
+Ceramic Mug Set
+</div>
+
+<div class="item-meta">
+Quantity: 1<br>
+Kitchen Collection
+</div>
+
+</div>
+
+<div class="item-price">
+₹ 44.00
+</div>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h2>
+Order Summary
+</h2>
+
+<div class="summary-row">
+<span>Subtotal</span>
+<span>₹ 133.00</span>
+</div>
+
+<div class="summary-row">
+<span>Shipping</span>
+<span>Free</span>
+</div>
+
+<div class="summary-row">
+<span>Taxes</span>
+<span>₹ 12.00</span>
+</div>
+
+<div class="summary-total">
+<span>Total</span>
+<span>₹ 145.00</span>
+</div>
+
+<a href="checkout.html"> 
+    <button class="btn"> Proceed to Checkout </button> 
+</a>
+
+</div>
+
+</div>
+
+<div class="recommendations">
+
+<h2>
+You may also like
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+<div class="product-body">
+<div class="product-name">
+Oak Serving Board
+</div>
+<div class="product-price">
+₹ 65.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800">
+<div class="product-body">
+<div class="product-name">
+Brass Bookends
+</div>
+<div class="product-price">
+₹ 55.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800">
+<div class="product-body">
+<div class="product-name">
+Linen Throw Blanket
+</div>
+<div class="product-price">
+₹ 120.00
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian
+</p>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
+</body>
+</html>

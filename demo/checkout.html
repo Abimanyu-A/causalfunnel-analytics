@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Meridian</title>
+
+<style>
+*, *::before, *::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#fff;
+    color:#111;
+}
+
+nav{
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    border-bottom:1px solid #e5e5e5;
+    position:sticky;
+    top:0;
+    background:white;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    font-weight:600;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:44px;
+    margin-bottom:50px;
+}
+
+.checkout-layout{
+    display:grid;
+    grid-template-columns:1.7fr 1fr;
+    gap:50px;
+}
+
+.section{
+    margin-bottom:50px;
+}
+
+.section h2{
+    font-size:22px;
+    margin-bottom:24px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:14px;
+    outline:none;
+}
+
+.summary{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    padding:30px;
+    height:max-content;
+}
+
+.summary h2{
+    margin-bottom:28px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    color:#555;
+    font-size:14px;
+}
+
+.total{
+    border-top:1px solid #e5e5e5;
+    margin-top:28px;
+    padding-top:28px;
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:600;
+}
+
+.btn{
+    width:100%;
+    margin-top:30px;
+    border:none;
+    background:#111;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.btn:hover{
+    background:#333;
+}
+
+.secure-note{
+    margin-top:18px;
+    color:#999;
+    font-size:12px;
+    text-align:center;
+}
+
+footer{
+    margin-top:100px;
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div>
+Cart
+</div>
+
+</nav>
+
+<div class="container">
+
+<p class="label">
+Checkout
+</p>
+
+<h1>
+Complete your order
+</h1>
+
+<div class="checkout-layout">
+
+<div>
+
+<div class="section">
+
+<h2>
+Shipping Information
+</h2>
+
+<div class="form-grid">
+
+<input placeholder="First name">
+<input placeholder="Last name">
+
+<input class="full-width" placeholder="Email address">
+
+<input class="full-width" placeholder="Street address">
+
+<input placeholder="City">
+<input placeholder="State">
+
+<input placeholder="Postal code">
+<input placeholder="Country">
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>
+Payment Details
+</h2>
+
+<div class="form-grid">
+
+<input class="full-width" placeholder="Card number">
+
+<input placeholder="MM / YY">
+<input placeholder="CVV">
+
+<input class="full-width" placeholder="Name on card">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h2>
+Order Summary
+</h2>
+
+<div class="item">
+<span>Minimal Desk Lamp</span>
+<span>₹ 89.00</span>
+</div>
+
+<div class="item">
+<span>Ceramic Mug Set</span>
+<span>₹ 44.00</span>
+</div>
+
+<div class="item">
+<span>Shipping</span>
+<span>Free</span>
+</div>
+
+<div class="item">
+<span>Taxes</span>
+<span>₹ 12.00</span>
+</div>
+
+<div class="total">
+<span>Total</span>
+<span>₹ 145.00</span>
+</div>
+
+<a href="index.html"> 
+    <button class="btn"> Place Order </button> 
+</a>
+
+<p class="secure-note">
+Secure checkout • SSL encrypted
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian
+</p>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
+</body>
+</html>

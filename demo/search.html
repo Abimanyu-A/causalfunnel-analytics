@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Meridian</title>
+
+<style>
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#111;
+    background:#fff;
+}
+
+nav{
+    height:64px;
+    border-bottom:1px solid #e5e5e5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:sticky;
+    top:0;
+    background:white;
+    z-index:100;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#111;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.label{
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:44px;
+    margin-bottom:18px;
+}
+
+.subtitle{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.search-bar{
+    margin-bottom:24px;
+}
+
+.search-bar input{
+    width:100%;
+    padding:16px 20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+}
+
+.search-meta{
+    color:#777;
+    font-size:13px;
+    margin-bottom:40px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.product-card{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    overflow:hidden;
+    transition:.15s;
+}
+
+.product-card:hover{
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.product-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.product-body{
+    padding:18px;
+}
+
+.product-name{
+    font-size:14px;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.product-price{
+    color:#666;
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.badge{
+    display:inline-block;
+    background:#f5f5f5;
+    color:#666;
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:20px;
+}
+
+footer{
+    margin-top:100px;
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="product.html">Products</a>
+<a href="cart.html">Cart</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<p class="label">
+Search
+</p>
+
+<h1>
+Find products
+</h1>
+
+<p class="subtitle">
+Explore thoughtfully designed pieces for modern living.
+</p>
+
+<div class="search-bar">
+<input type="text" placeholder="Search products..." value="desk">
+</div>
+
+<p class="search-meta">
+Showing 6 results for "desk"
+</p>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+<div class="product-body">
+<div class="product-name">
+Minimal Desk Lamp
+</div>
+<div class="product-price">
+$89.00
+</div>
+<div class="badge">
+Workspace
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800">
+<div class="product-body">
+<div class="product-name">
+Walnut Desk Organizer
+</div>
+<div class="product-price">
+$54.00
+</div>
+<div class="badge">
+Workspace
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800">
+<div class="product-body">
+<div class="product-name">
+Leather Notebook Set
+</div>
+<div class="product-price">
+$32.00
+</div>
+<div class="badge">
+Workspace
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+<div class="product-body">
+<div class="product-name">
+Standing Desk Shelf
+</div>
+<div class="product-price">
+$74.00
+</div>
+<div class="badge">
+Workspace
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1486946255434-2466348c2166?w=800">
+<div class="product-body">
+<div class="product-name">
+Minimal Clock
+</div>
+<div class="product-price">
+$39.00
+</div>
+<div class="badge">
+Accessories
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800">
+<div class="product-body">
+<div class="product-name">
+Brass Bookends
+</div>
+<div class="product-price">
+$55.00
+</div>
+<div class="badge">
+Workspace
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian
+</p>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
+</body>
+</html>

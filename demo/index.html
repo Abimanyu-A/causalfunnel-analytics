@@ -1,297 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meridian - Modern Commerce</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian - Modern Commerce</title>
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111;
-      background: #fff;
-    }
+<style>
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    /* Nav */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      height: 60px;
-      border-bottom: 1px solid #e5e5e5;
-      position: sticky;
-      top: 0;
-      background: #fff;
-      z-index: 10;
-    }
-    .nav-logo { font-weight: 600; font-size: 15px; cursor: pointer; }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a {
-      text-decoration: none;
-      font-size: 14px;
-      color: #555;
-      cursor: pointer;
-    }
-    .nav-links a:hover { color: #111; }
-    .nav-actions { display: flex; gap: 12px; align-items: center; }
-    .btn {
-      font-size: 13px;
-      padding: 8px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-      font-family: inherit;
-    }
-    .btn-ghost { background: none; border: 1px solid #ddd; color: #333; }
-    .btn-ghost:hover { background: #f5f5f5; }
-    .btn-primary { background: #111; color: #fff; }
-    .btn-primary:hover { background: #333; }
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#111;
+    background:#fff;
+}
 
-    /* Hero */
-    .hero {
-      padding: 80px 40px 72px;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .hero-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 16px;
-    }
-    .hero h1 { font-size: 42px; font-weight: 600; line-height: 1.15; margin-bottom: 20px; }
-    .hero p { font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 32px; }
-    .hero-actions { display: flex; gap: 12px; }
-    .hero-image {
-      background: #f5f5f5;
-      border-radius: 16px;
-      aspect-ratio: 4/3;
-    }
+/* NAV */
 
-    /* Section */
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 40px;
-    }
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 8px;
-    }
-    .section-title {
-      font-size: 26px;
-      font-weight: 600;
-      margin-bottom: 36px;
-    }
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    height:64px;
+    border-bottom:1px solid #e5e5e5;
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:100;
+}
 
-    /* Product grid */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .product-card {
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: box-shadow 0.15s;
-    }
-    .product-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-    .product-card-image {
-      background: #f5f5f5;
-      aspect-ratio: 4/3;
-    }
-    .product-card-body { padding: 16px; }
-    .product-name { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
-    .product-price { font-size: 13px; color: #555; margin-bottom: 14px; }
-    .product-card .btn { width: 100%; text-align: center; padding: 9px; }
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
 
-    /* Pricing */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .pricing-card {
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      padding: 28px;
-    }
-    .pricing-card.featured { border-color: #111; }
-    .pricing-tier { font-size: 13px; font-weight: 600; color: #999; margin-bottom: 8px; }
-    .pricing-price { font-size: 32px; font-weight: 600; margin-bottom: 4px; }
-    .pricing-price span { font-size: 14px; font-weight: 400; color: #999; }
-    .pricing-desc { font-size: 13px; color: #555; margin-bottom: 24px; line-height: 1.6; }
-    .pricing-features { list-style: none; margin-bottom: 24px; }
-    .pricing-features li {
-      font-size: 13px;
-      color: #555;
-      padding: 5px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .pricing-features li:last-child { border: none; }
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
 
-    /* Footer */
-    footer {
-      border-top: 1px solid #e5e5e5;
-      padding: 24px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    footer p { font-size: 12px; color: #999; }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { font-size: 12px; color: #999; text-decoration: none; cursor: pointer; }
-  </style>
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#111;
+}
+
+.nav-search input{
+    width:220px;
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:13px;
+    outline:none;
+}
+
+.nav-actions{
+    display:flex;
+    gap:12px;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    padding:9px 18px;
+    border-radius:8px;
+    font-size:13px;
+    font-family:inherit;
+}
+
+.btn-primary{
+    background:#111;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#333;
+}
+
+.btn-ghost{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.btn-ghost:hover{
+    background:#f7f7f7;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-label{
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#999;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:46px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:32px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+}
+
+.hero-image{
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.hero-image img{
+    width:100%;
+    display:block;
+}
+
+/* SECTION */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 40px;
+}
+
+.section-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.section-title{
+    font-size:28px;
+    margin-bottom:36px;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.product-card{
+    border:1px solid #e5e5e5;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.15s;
+}
+
+.product-card:hover{
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.product-card-image{
+    aspect-ratio:4/3;
+    overflow:hidden;
+}
+
+.product-card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-card-body{
+    padding:18px;
+}
+
+.product-name{
+    font-size:14px;
+    font-weight:500;
+    margin-bottom:6px;
+}
+
+.product-price{
+    color:#666;
+    font-size:13px;
+    margin-bottom:16px;
+}
+
+.product-card .btn{
+    width:100%;
+}
+
+/* COLLECTIONS */
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.collection-card{
+    border:1px solid #e5e5e5;
+    padding:26px;
+    border-radius:14px;
+}
+
+.collection-card h3{
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.collection-card p{
+    color:#666;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    background:#fafafa;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.newsletter-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.newsletter-box h2{
+    margin-bottom:16px;
+}
+
+.newsletter-box p{
+    color:#666;
+    margin-bottom:28px;
+}
+
+.newsletter-box input{
+    width:320px;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#999;
+    font-size:12px;
+}
+</style>
 </head>
+
 <body>
 
-  <nav>
-    <div class="nav-logo">Meridian</div>
-    <div class="nav-links">
-      <a>Products</a>
-      <a>Collections</a>
-      <a>Pricing</a>
-      <a>About</a>
-    </div>
-    <div class="nav-actions">
-      <button class="btn btn-ghost">Log in</button>
-      <button class="btn btn-primary">Get started</button>
-    </div>
-  </nav>
+<nav>
 
-  <div class="hero">
-    <div>
-      <p class="hero-label">New Collection - Summer 2025</p>
-      <h1>Quality goods for modern living</h1>
-      <p>Thoughtfully made products for everyday use. Designed to last, priced fairly.</p>
-      <div class="hero-actions">
-        <button class="btn btn-primary">Shop now</button>
-        <button class="btn btn-ghost">See collections</button>
-      </div>
-    </div>
-    <div class="hero-image"></div>
-  </div>
+<div class="nav-left">
 
-  <section>
-    <p class="section-label">Featured Products</p>
-    <h2 class="section-title">Staff picks</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Minimal Desk Lamp</p>
-          <p class="product-price">$89.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Ceramic Mug Set</p>
-          <p class="product-price">$44.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Linen Throw Blanket</p>
-          <p class="product-price">$120.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Oak Serving Board</p>
-          <p class="product-price">$65.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Brass Bookends</p>
-          <p class="product-price">$55.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-image"></div>
-        <div class="product-card-body">
-          <p class="product-name">Wool Cushion Cover</p>
-          <p class="product-price">$38.00</p>
-          <button class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
 
-  <section style="background: #fafafa; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; max-width: 100%; padding: 60px 0;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 0 40px;">
-      <p class="section-label">Pricing</p>
-      <h2 class="section-title">Simple, transparent pricing</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <p class="pricing-tier">Starter</p>
-          <p class="pricing-price">$0 <span>/ month</span></p>
-          <p class="pricing-desc">For individuals just getting started.</p>
-          <ul class="pricing-features">
-            <li>Up to 5 products</li>
-            <li>Basic analytics</li>
-            <li>Email support</li>
-          </ul>
-          <button class="btn btn-ghost" style="width:100%;text-align:center;">Get started</button>
-        </div>
-        <div class="pricing-card featured">
-          <p class="pricing-tier">Pro</p>
-          <p class="pricing-price">$49 <span>/ month</span></p>
-          <p class="pricing-desc">For growing stores with more needs.</p>
-          <ul class="pricing-features">
-            <li>Unlimited products</li>
-            <li>Advanced analytics</li>
-            <li>Priority support</li>
-          </ul>
-          <button class="btn btn-primary" style="width:100%;text-align:center;">Start free trial</button>
-        </div>
-        <div class="pricing-card">
-          <p class="pricing-tier">Enterprise</p>
-          <p class="pricing-price">Custom</p>
-          <p class="pricing-desc">For large teams with custom requirements.</p>
-          <ul class="pricing-features">
-            <li>Custom integrations</li>
-            <li>Dedicated account manager</li>
-            <li>SLA guarantee</li>
-          </ul>
-          <button class="btn btn-ghost" style="width:100%;text-align:center;">Contact sales</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="nav-links">
+<a href="product.html">Products</a>
+<a href="collections.html">Collections</a>
+<a href="search.html">Search</a>
+<a href="about.html">About</a>
+</div>
 
-  <footer>
-    <p>Meridian - Demo page for CausalFunnel tracker testing</p>
-    <div class="footer-links">
-      <a>Privacy</a>
-      <a>Terms</a>
-      <a>Contact</a>
-    </div>
-  </footer>
+<div class="nav-search">
+<input type="text" placeholder="Search products">
+</div>
 
-  <script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+</div>
+
+<div class="nav-actions">
+<button class="btn btn-ghost">Log in</button>
+<button class="btn btn-primary">Get started</button>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<div>
+
+<p class="hero-label">
+New Collection - Summer 2025
+</p>
+
+<h1>
+Quality goods for modern living
+</h1>
+
+<p>
+Thoughtfully made products for everyday use. Designed to last and priced fairly.
+</p>
+
+<div class="hero-actions">
+
+  <a href="collections.html"> 
+    <button class="btn btn-primary"> Shop now </button> 
+  </a>
+
+  <a href="collections.html"> 
+    <button class="btn btn-ghost"> See collections </button> 
+  </a></div>
+
+</div>
+
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200"
+alt="">
+</div>
+
+</div>
+
+<section>
+
+<p class="section-label">
+Featured Products
+</p>
+
+<h2 class="section-title">
+Staff picks
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<div class="product-card-image">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+</div>
+<div class="product-card-body">
+<p class="product-name">Minimal Desk Lamp</p>
+<p class="product-price">₹ 89.00</p>
+<a href="cart.html"> 
+  <button class="btn btn-primary"> 
+    Add to cart 
+  </button> 
+</a>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-card-image">
+<img src="https://imgs.search.brave.com/QUf74V0p6NhJhLGkt2G6y-IVWoFlSkYzXHGyx6ziiTU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zY2Ru/LnNwZWVkc2l6ZS5j/b20vYWE1ZDZjZDct/ZGE5MS00NTQ2LTky/ZDktODkzZWE0MmRk/N2ZmL3d3dy5ua3Vr/dS5jb20vY2RuL3No/b3AvZmlsZXMvQ2Fu/ZWxhLU11Zy1EdXN0/eS1UZXJyYWNvdHRh/LVNldC1vZi0yLW5r/dWt1LTIuanBnP3Y9/MTc3OTg5MjM3OSZ3/aWR0aD0zODQw">
+</div>
+<div class="product-card-body">
+<p class="product-name">Ceramic Mug Set</p>
+<p class="product-price">₹ 44.00</p>
+<a href="cart.html"> 
+  <button class="btn btn-primary"> 
+    Add to cart 
+  </button> 
+</a>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-card-image">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800">
+</div>
+<div class="product-card-body">
+<p class="product-name">Linen Throw Blanket</p>
+<p class="product-price">₹ 120.00</p>
+<a href="cart.html"> 
+  <button class="btn btn-primary"> 
+    Add to cart 
+  </button> 
+</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<p class="section-label">
+Collections
+</p>
+
+<h2 class="section-title">
+Browse by room
+</h2>
+
+<div class="collection-grid">
+
+<div class="collection-card">
+<h3>Workspace</h3>
+<p>
+Lighting, organizers and essentials for productive spaces.
+</p>
+</div>
+
+<div class="collection-card">
+<h3>Kitchen</h3>
+<p>
+Cookware and serving accessories made for everyday use.
+</p>
+</div>
+
+<div class="collection-card">
+<h3>Living Room</h3>
+<p>
+Soft furnishings and timeless decorative pieces.
+</p>
+</div>
+
+<div class="collection-card">
+<h3>Bedroom</h3>
+<p>
+Comfort-focused pieces for restful evenings.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<div class="newsletter-box">
+
+<h2>
+Stay updated
+</h2>
+
+<p>
+Receive product launches and seasonal collections.
+</p>
+
+<input placeholder="Enter your email">
+
+<br><br>
+
+<button class="btn btn-primary">
+Subscribe
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Meridian - Demo page for CausalFunnel tracker testing
+</p>
+
+<div class="footer-links">
+  <a href="about.html">About</a> 
+  <a href="privacy.html">Privacy</a> 
+  <a href="terms.html">Terms</a> 
+  <a href="contact.html">Contact</a> 
+</div>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
 </body>
 </html>

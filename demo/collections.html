@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — Meridian</title>
+
+<style>
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#111;
+    background:#fff;
+}
+
+nav{
+    height:64px;
+    border-bottom:1px solid #e5e5e5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:10;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#111;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    font-weight:600;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:44px;
+    margin-bottom:20px;
+}
+
+.hero-text{
+    color:#555;
+    line-height:1.8;
+    max-width:700px;
+    margin-bottom:60px;
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    margin-bottom:90px;
+}
+
+.collection-card{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    overflow:hidden;
+    transition:.15s;
+}
+
+.collection-card:hover{
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.collection-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.collection-body{
+    padding:20px;
+}
+
+.collection-title{
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.collection-desc{
+    color:#666;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.section-title{
+    font-size:28px;
+    margin-bottom:36px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.product-card{
+    border:1px solid #e5e5e5;
+    border-radius:16px;
+    overflow:hidden;
+    transition:.15s;
+}
+
+.product-card:hover{
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.product-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.product-body{
+    padding:18px;
+}
+
+.product-name{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.product-price{
+    font-size:13px;
+    color:#666;
+}
+
+footer{
+    margin-top:100px;
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="product.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="about.html">About</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<p class="label">
+Collections
+</p>
+
+<h1>
+Browse by room
+</h1>
+
+<p class="hero-text">
+Thoughtfully curated pieces designed for modern living. Explore collections created to bring simplicity, warmth and timeless style into every corner of your home.
+</p>
+
+<div class="collection-grid">
+
+<div class="collection-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900">
+<div class="collection-body">
+<div class="collection-title">Workspace</div>
+<div class="collection-desc">
+Lighting and accessories for focused spaces.
+</div>
+</div>
+</div>
+
+<div class="collection-card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900">
+<div class="collection-body">
+<div class="collection-title">Kitchen</div>
+<div class="collection-desc">
+Everyday essentials crafted for gathering.
+</div>
+</div>
+</div>
+
+<div class="collection-card">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=900">
+<div class="collection-body">
+<div class="collection-title">Living Room</div>
+<div class="collection-desc">
+Soft textures and timeless pieces.
+</div>
+</div>
+</div>
+
+<div class="collection-card">
+<img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=900">
+<div class="collection-body">
+<div class="collection-title">Bedroom</div>
+<div class="collection-desc">
+Comfort and calm for restful evenings.
+</div>
+</div>
+</div>
+
+</div>
+
+<h2 class="section-title">
+Featured products
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+<div class="product-body">
+<div class="product-name">
+Minimal Desk Lamp
+</div>
+<div class="product-price">
+₹ 89.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://imgs.search.brave.com/QUf74V0p6NhJhLGkt2G6y-IVWoFlSkYzXHGyx6ziiTU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zY2Ru/LnNwZWVkc2l6ZS5j/b20vYWE1ZDZjZDct/ZGE5MS00NTQ2LTky/ZDktODkzZWE0MmRk/N2ZmL3d3dy5ua3Vr/dS5jb20vY2RuL3No/b3AvZmlsZXMvQ2Fu/ZWxhLU11Zy1EdXN0/eS1UZXJyYWNvdHRh/LVNldC1vZi0yLW5r/dWt1LTIuanBnP3Y9/MTc3OTg5MjM3OSZ3/aWR0aD0zODQw">
+<div class="product-body">
+<div class="product-name">
+Ceramic Mug Set
+</div>
+<div class="product-price">
+₹ 44.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800">
+<div class="product-body">
+<div class="product-name">
+Brass Bookends
+</div>
+<div class="product-price">
+₹ 55.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+<div class="product-body">
+<div class="product-name">
+Oak Serving Board
+</div>
+<div class="product-price">
+₹ 65.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800">
+<div class="product-body">
+<div class="product-name">
+Linen Throw Blanket
+</div>
+<div class="product-price">
+₹ 120.00
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+<div class="product-body">
+<div class="product-name">
+Wool Cushion Cover
+</div>
+<div class="product-price">
+₹ 38.00
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian
+</p>
+
+</footer>
+
+<script src="../tracker/tracker.js"></script>
+
+</body>
+</html>

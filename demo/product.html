@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minimal Desk Lamp — Meridian</title>
+
+<style>
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#111;
+    background:#fff;
+}
+
+nav{
+    height:64px;
+    border-bottom:1px solid #e5e5e5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    position:sticky;
+    top:0;
+    background:white;
+}
+
+.nav-logo{
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.product-layout{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:70px;
+    align-items:start;
+}
+
+.gallery img{
+    width:100%;
+    display:block;
+    border-radius:16px;
+    margin-bottom:20px;
+}
+
+.product-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#999;
+    font-weight:600;
+    margin-bottom:16px;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.rating{
+    color:#777;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:30px;
+    font-weight:600;
+    margin-bottom:24px;
+}
+
+.description{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:36px;
+}
+
+.btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.btn-primary{
+    background:#111;
+    color:white;
+}
+
+.specs{
+    margin-top:60px;
+    border-top:1px solid #e5e5e5;
+    padding-top:40px;
+}
+
+.spec-row{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid #f0f0f0;
+    color:#555;
+}
+
+.info-section{
+    margin-top:70px;
+}
+
+.info-section h2{
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.info-section p{
+    color:#555;
+    line-height:1.8;
+}
+
+.related-products{
+    margin-top:100px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.card{
+    border:1px solid #e5e5e5;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:18px;
+}
+
+.card-title{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.card-price{
+    color:#666;
+    font-size:13px;
+}
+
+footer{
+    margin-top:100px;
+    border-top:1px solid #e5e5e5;
+    padding:28px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="nav-logo"> 
+  <a href="index.html" style="text-decoration:none;color:#111;"> Meridian </a> 
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="cart.html">Cart</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<div class="product-layout">
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200">
+
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200">
+
+</div>
+
+<div>
+
+<p class="product-label">
+Workspace Collection
+</p>
+
+<h1>
+Minimal Desk Lamp
+</h1>
+
+<p class="rating">
+★★★★★ 4.8 · 128 reviews
+</p>
+
+<p class="price">
+₹ 89.00
+</p>
+
+<p class="description">
+Designed for focused work and calm spaces, the Minimal Desk Lamp combines brushed aluminum construction with warm ambient lighting. Its timeless silhouette complements modern interiors while providing practical everyday illumination.
+</p>
+
+<button class="btn btn-primary">
+Add to cart
+</button>
+
+<div class="specs">
+
+<div class="spec-row">
+<span>Material</span>
+<span>Brushed Aluminum</span>
+</div>
+
+<div class="spec-row">
+<span>Height</span>
+<span>16 in</span>
+</div>
+
+<div class="spec-row">
+<span>Light Temperature</span>
+<span>3000K Warm White</span>
+</div>
+
+<div class="spec-row">
+<span>Cord Length</span>
+<span>6 ft</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="info-section">
+
+<h2>
+Shipping & Returns
+</h2>
+
+<p>
+Orders typically ship within 1–2 business days. Complimentary returns are accepted within 30 days of delivery. International shipping options are available for select destinations.
+</p>
+
+</div>
+
+<div class="info-section">
+
+<h2>
+Designed to Last
+</h2>
+
+<p>
+Every Meridian product is thoughtfully created with durable materials and timeless aesthetics. We believe everyday objects should be useful, beautiful, and built for years of use.
+</p>
+
+</div>
+
+<div class="related-products">
+
+<h2 style="margin-bottom:32px;">
+You may also like
+</h2>
+
+<div class="related-grid">
+
+<div class="card">
+<img src="https://imgs.search.brave.com/QUf74V0p6NhJhLGkt2G6y-IVWoFlSkYzXHGyx6ziiTU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zY2Ru/LnNwZWVkc2l6ZS5j/b20vYWE1ZDZjZDct/ZGE5MS00NTQ2LTky/ZDktODkzZWE0MmRk/N2ZmL3d3dy5ua3Vr/dS5jb20vY2RuL3No/b3AvZmlsZXMvQ2Fu/ZWxhLU11Zy1EdXN0/eS1UZXJyYWNvdHRh/LVNldC1vZi0yLW5r/dWt1LTIuanBnP3Y9/MTc3OTg5MjM3OSZ3/aWR0aD0zODQw">
+<div class="card-body">
+<p class="card-title">
+Ceramic Mug Set
+</p>
+<p class="card-price">
+₹ 44.00
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+<div class="card-body">
+<p class="card-title">
+Oak Serving Board
+</p>
+<p class="card-price">
+₹ 65.00
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800">
+<div class="card-body">
+<p class="card-title">
+Brass Bookends
+</p>
+<p class="card-price">
+₹ 55.00
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Meridian — Demo page for CausalFunnel tracker testing
+</p>
+
+<p>
+© 2025 Meridian
+</p>
+
+</footer>
+
+<script src="https://causalfunnel-analytics-yi0e.onrender.com/tracker/tracker.js"></script>
+
+</body>
+</html>
